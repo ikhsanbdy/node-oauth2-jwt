@@ -76,7 +76,8 @@ app.get("/api/test", controller.index);
 
 // server config
 const server = http.Server(app);
+const port = process.env.PORT || 3000;
 
-server.listen(3000, function () {
-    console.info("Server running at port: 3000");
+server.listen(port, function () {
+    console.info("Server running at port: " + port);
 });
